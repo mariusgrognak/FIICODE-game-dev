@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://ddpmbvr2hirb7"]
+
+[ext_resource type="Script" uid="uid://bxehhjm56jikt" path="res://scripts/spotlight.gd" id="1_hxjgs"]
+[ext_resource type="PackedScene" uid="uid://jrd0avefv0ck" path="res://graphics/lampa.glb" id="2_hxjgs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qjr2k"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_otfkb"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Spotlight" type="StaticBody3D" unique_id=268931266]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_hxjgs")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1819913799]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.140462, 12.099281, 0.13196659)
+layers = 4
+shadow_enabled = true
+spot_range = 40.0
+spot_attenuation = 0.01
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1222009194]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1824229305 groups=["lumini"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2058350719]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_qjr2k")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=292367158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+pixel_size = 0.02
+billboard = 1
+text = "Press E to interact.
+"
+
+[node name="lampa" parent="." unique_id=1040618541 instance=ExtResource("2_hxjgs")]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 1, 0, 0, 0)
+
+[node name="LightPart_Sphere" parent="lampa" index="0" unique_id=1851341059]
+layers = 256
+
+[node name="Pole_Cylinder" parent="lampa" index="1" unique_id=722745615]
+layers = 256
+
+[node name="Sphere_Sphere_001" parent="lampa" index="2" unique_id=2102000012]
+layers = 256
+
+[node name="Torus_001" parent="lampa" index="3" unique_id=966498218]
+layers = 512
+
+[node name="Area3D2" type="Area3D" parent="." unique_id=1431864802]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1584385623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25812972, 0.2773283)
+shape = SubResource("ConcavePolygonShape3D_otfkb")
+
+[editable path="lampa"]
