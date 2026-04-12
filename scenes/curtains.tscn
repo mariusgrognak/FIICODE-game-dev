@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b7bj80qlme3yo"]
+
+[ext_resource type="Script" uid="uid://chbxh4fybd5qh" path="res://scenes/ui.gd" id="1_m0ava"]
+[ext_resource type="Texture2D" uid="uid://cfkdjs340e3ri" path="res://textures/curtain/CurtainUpperLeft-resources.assets-1795.png" id="2_a67pq"]
+[ext_resource type="Texture2D" uid="uid://bcoookowy7ok4" path="res://textures/curtain/CurtainUpperRight-resources.assets-1146.png" id="3_xy60e"]
+[ext_resource type="Texture2D" uid="uid://blbnj1ob2b7os" path="res://textures/curtain/Curtain-resources.assets-1570.png" id="4_ni6hs"]
+
+[node name="UI" type="CanvasLayer" unique_id=105228844]
+script = ExtResource("1_m0ava")
+
+[node name="Curtains" type="Control" parent="." unique_id=1068950359]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LEdge" type="TextureRect" parent="Curtains" unique_id=321628025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_a67pq")
+stretch_mode = 4
+
+[node name="REdge" type="TextureRect" parent="Curtains" unique_id=202777081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xy60e")
+
+[node name="LBody" type="TextureRect" parent="Curtains" unique_id=447664160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -795.0
+offset_right = -795.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ni6hs")
+
+[node name="RBody" type="TextureRect" parent="Curtains" unique_id=1118861062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 795.0
+offset_right = 795.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ni6hs")
+flip_h = true

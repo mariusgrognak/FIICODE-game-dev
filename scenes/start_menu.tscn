@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://s4blisvx4b82"]
+
+[ext_resource type="Script" uid="uid://cxhoy7fp8a2j3" path="res://start_menu.gd" id="1_ouf4f"]
+
+[node name="StartMenu" type="Control" unique_id=229658302]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouf4f")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenu" type="VBoxContainer" parent="." unique_id=1098748947]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.5
+offset_right = 100.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="MainMenu" unique_id=1004742223]
+layout_mode = 2
+text = "Start"
+
+[node name="Options" type="Button" parent="MainMenu" unique_id=824325107]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MainMenu" unique_id=1935657697]
+layout_mode = 2
+text = "Quit"
+
+[node name="LevelSelect" type="VBoxContainer" parent="." unique_id=1440357719]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -120.5
+offset_right = 100.0
+offset_bottom = 120.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stage1" type="Button" parent="LevelSelect" unique_id=2010197759]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Stage2" type="Button" parent="LevelSelect" unique_id=1165964862]
+layout_mode = 2
+text = "Level 2"
+
+[node name="Stage3" type="Button" parent="LevelSelect" unique_id=1481345981]
+layout_mode = 2
+text = "Level 3"
+
+[node name="Back" type="Button" parent="LevelSelect" unique_id=1660137570]
+layout_mode = 2
+text = "Back"
+
+[node name="Settings" type="VBoxContainer" parent="." unique_id=797481198]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -15.5
+offset_right = 22.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Settings" unique_id=1589826803]
+layout_mode = 2
+text = "Back"
+
+[node name="Button" type="Button" parent="Settings" unique_id=1641617992]
+layout_mode = 2
+text = "wtf"
+
+[node name="Button2" type="Button" parent="Settings" unique_id=400054527]
+layout_mode = 2
+text = "placeholder"

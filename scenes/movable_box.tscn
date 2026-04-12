@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8oxt56jvjy40"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_sr26x"]
+[ext_resource type="PackedScene" uid="uid://b2oe3iu3gv2mi" path="res://textures/OldWoodCrate_ver01.glb" id="1_psasx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6hd2x"]
 
@@ -13,10 +13,9 @@ axis_lock_angular_z = true
 linear_damp_mode = 1
 linear_damp = 10.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1908044589]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-mesh = SubResource("BoxMesh_sr26x")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=384408471]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_6hd2x")
+
+[node name="OldWoodCrate_ver01" parent="." unique_id=945449292 instance=ExtResource("1_psasx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

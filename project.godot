@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="New Game Project3"
-run/main_scene="uid://5cai7o726vmq"
+run/main_scene="uid://s4blisvx4b82"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+TransitionManager="*uid://b7bj80qlme3yo"
+SaveManager="*uid://bl2ljyn1ud5i2"
 
 [display]
 
@@ -22,6 +27,9 @@ window/size/viewport_height=900
 [global_group]
 
 lumini=""
+Checkpoint2=""
+Checkpoint1=""
+Players=""
 
 [input]
 

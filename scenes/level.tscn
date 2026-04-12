@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8oxt56jvjy40" path="res://scenes/movable_box.tscn" id="3_l0lc7"]
 [ext_resource type="PackedScene" uid="uid://be62tqy2vbe8a" path="res://scenes/mirror.tscn" id="4_pvoer"]
 [ext_resource type="PackedScene" uid="uid://dxtgoqd3w8wcu" path="res://scenes/player2.tscn" id="6_2r41h"]
+[ext_resource type="PackedScene" uid="uid://dgv66ogp5xgm0" path="res://scenes/camera.tscn" id="7_klq6b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nwvwn"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -52,10 +53,6 @@ environment = SubResource("Environment_l0lc7")
 
 [node name="Player" parent="." unique_id=36053123 instance=ExtResource("1_nwvwn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1044664, 0, -0.2716446)
-
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1268950099]
-transform = Transform3D(1, 0, 0, 0, 0.7408046, 0.67172056, 0, -0.67172056, 0.7408046, -0.556962, 10.028743, 4.085764)
-fov = 90.75036
 
 [node name="Spotlight" parent="." unique_id=268931266 groups=["lumini"] instance=ExtResource("2_dg18n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3876328, 4.0362377, -14.977232)
@@ -127,7 +124,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113701, 3.8354402, -6.1818
 [node name="world2" type="Node3D" parent="." unique_id=1019590269]
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="world2" unique_id=1837605055]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2025766, 0, 15.757551)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.677528, 7.3082094, -3.1164398)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="world2/StaticBody3D2" unique_id=1022748339]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 2.451221, -6.955293)
@@ -154,3 +151,6 @@ shape = SubResource("ConcavePolygonShape3D_pvoer")
 
 [node name="Player2" parent="." unique_id=2130815620 instance=ExtResource("6_2r41h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3316336, 2.6527046e-05, 6.552641)
+
+[node name="Camera" parent="." unique_id=1758449179 instance=ExtResource("7_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7430458, 8.384406, 25.274384)

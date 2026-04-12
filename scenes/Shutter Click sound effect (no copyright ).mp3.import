@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://celc2yduol76n"
+path="res://.godot/imported/Shutter Click sound effect (no copyright ).mp3-6a6c3f40e5e63cb10024b662545a00c6.mp3str"
+
+[deps]
+
+source_file="res://scenes/Shutter Click sound effect (no copyright ).mp3"
+dest_files=["res://.godot/imported/Shutter Click sound effect (no copyright ).mp3-6a6c3f40e5e63cb10024b662545a00c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

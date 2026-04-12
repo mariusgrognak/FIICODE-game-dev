@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://be62tqy2vbe8a"]
 
 [ext_resource type="Script" uid="uid://djfg2aysj82y2" path="res://scripts/mirror.gd" id="1_yn8hn"]
+[ext_resource type="AudioStream" uid="uid://celc2yduol76n" path="res://scenes/Shutter Click sound effect (no copyright ).mp3" id="2_652kc"]
 
-[sub_resource type="PrismMesh" id="PrismMesh_466fy"]
+[sub_resource type="BoxMesh" id="BoxMesh_5o7h0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_652kc"]
+albedo_color = Color(0.59607846, 0.31764707, 0, 0.72156864)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mxuba"]
 data = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i70lk"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_nha6m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5823m"]
+albedo_color = Color(1, 0.21568628, 0.023529412, 1)
 
 [node name="Mirror" type="StaticBody3D" unique_id=738149637]
 collision_layer = 8
@@ -15,7 +24,9 @@ collision_mask = 10
 script = ExtResource("1_yn8hn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=617254510]
-mesh = SubResource("PrismMesh_466fy")
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_5o7h0")
+surface_material_override/0 = SubResource("StandardMaterial3D_652kc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=800577602]
 shape = SubResource("ConcavePolygonShape3D_mxuba")
@@ -34,3 +45,11 @@ pixel_size = 0.02
 billboard = 1
 text = "Press E to interact.
 "
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=621221591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8583696, 0)
+mesh = SubResource("SphereMesh_nha6m")
+surface_material_override/0 = SubResource("StandardMaterial3D_5823m")
+
+[node name="Click" type="AudioStreamPlayer3D" parent="." unique_id=1574544394]
+stream = ExtResource("2_652kc")
